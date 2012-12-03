@@ -1,0 +1,19 @@
+
+@import "../../vendor/twitter/bootstrap/less/bootstrap.less";
+// Padding for fixed-navbar
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+@import "../../vendor/twitter/bootstrap/less/responsive.less";
+@iconSpritePath: "/images/bootstrap/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "/images/bootstrap/glyphicons-halflings-white.png";
+
+// A class to apply to elements to prevent them from being selected.
+// Of course this only really works on webkit and such, but we aren't exactly using IE here.
+.noSelect {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
