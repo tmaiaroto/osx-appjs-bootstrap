@@ -25,13 +25,12 @@ Checkout the ```app.js``` file first. In there you will see options to change fi
 application along with the default port your app will listen on (which you may want to change to
 avoid conflicts with other things) and more.
 
-You can change the default application icon by building your own .icns file and replacing ```src/app.icns```
-Just a small note about the application icons...OS X will cache them and while the script tries
-to remove the .DS_Store file and clear that up, it may not be successful. You can typically move
-the application file around or relaunch Finder to clear the cache and see changes to the app icon.
-If you have the ```dist``` directory open in Finder when you go to bundle the application, you may
-see it update then. You can also try changing the view in Finder to a list, etc. in order to see it update.
-It's annoying, I know. I tried to make it less painful.
+You can of course install any node module you like with npm just like normal. Just make sure
+you are running all that in the ```src``` directory. Everything goes in there.
+
+You can change the default application icon by making your own .icns file and replacing ```src/app.icns```
+Just a small note about the application icons...OS X will cache them. I tried to make the bundle script
+remove that cache best I could, but you may need to take other measures. Sorry.
 
 Be sure to look at the help for the bundle script: ```./bundle.sh --help``` for more options.
 Alternatively, you can change the Info.plist file manually (or with XCode or something) after
@@ -43,6 +42,9 @@ I included a ```.noSelect``` class in the default stylesheet (and in the .less f
 this to elements you want to disable from being highlighted when selected. This is quite useful for text
 so when a user tries to click and drag to select, they won't be able to. There will be no blue (or whatever
 color your CSS made it) highlight color all over.
+
+Don't want to build the application bundle to test things out? No problem, run this command:
+```bin/node --harmony src/app```
 
 ## Why?
 
