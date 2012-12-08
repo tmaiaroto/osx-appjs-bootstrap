@@ -46,6 +46,12 @@ color your CSS made it) highlight color all over.
 Don't want to build the application bundle to test things out? No problem, run this command:
 ```bin/node --harmony src/app```
 
+You may even want to run a build command from your IDE to execute that. For example, in Sublimie Text 2,
+I now simply press Command-B and up pops the application with all my recent changes. It even kills the old
+process first so I don't need to close the app before launching it again. The only thing I haven't perfected
+there was to bring the app to the foreground. I tried AppleScirpt via osascript but I couldn't get it to work.
+Anyway, I've included a "test.sh" script for you to use either from the command line or called by your IDE.
+
 ## Why?
 
 I wasn't totally satisified with AppJs out of the box. I felt that it didn't leave me with enough to
